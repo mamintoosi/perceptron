@@ -1,7 +1,12 @@
 # Neural-Networks from scratch
 Repository of neural network implementations from scratch.
 
-The original repository was in <a href=https://jtsulliv.github.io/perceptron/"> JSULLIVAN github page </a>, but currently is unavailable.
+[![repo size](https://img.shields.io/github/repo-size/mamintoosi/perceptron.svg)](https://github.com/mamintoosi/perceptron/archive/master.zip)
+ [![GitHub forks](https://img.shields.io/github/forks/mamintoosi/perceptron)](https://github.com/mamintoosi/perceptron/network)
+[![GitHub issues](https://img.shields.io/github/issues/mamintoosi/perceptron)](https://github.com/mamintoosi/perceptron/issues)
+[![GitHub license](https://img.shields.io/github/license/mamintoosi/perceptron)](https://github.com/mamintoosi/perceptron/blob/main/LICENSE)
+
+The original repository was in <a href="https://jtsulliv.github.io/perceptron/"> JSULLIVAN github page </a>, but currently is unavailable.
 
 ## Run in Google colab:
 
