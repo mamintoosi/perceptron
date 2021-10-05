@@ -6,8 +6,9 @@ Repository of neural network implementations from scratch.
 [![GitHub issues](https://img.shields.io/github/issues/mamintoosi/perceptron)](https://github.com/mamintoosi/perceptron/issues)
 [![GitHub license](https://img.shields.io/github/license/mamintoosi/perceptron)](https://github.com/mamintoosi/perceptron/blob/main/LICENSE)
 
-The original repository was in <a href="https://jtsulliv.github.io/perceptron/"> JSULLIVAN github page </a>, but currently is unavailable.
-
 ## Run in Google colab:
 
 https://colab.research.google.com/github/mamintoosi/perceptron/blob/main/perceptron.ipynb
+
+
+Some files is borrowed from <a href="https://jtsulliv.github.io/perceptron/"> JSULLIVAN github page </a>, but currently is unavailable.

@@ -561,18 +561,18 @@ $w_j$
 $w_0=b$
 به عنوان وزن اتصال این ورودی منظور می‌شود. به این ترتیب، رابطه بالا به صورت زیر نوشته می‌شود:
 \begin{equation}
-  a=\sum_{j=1}^n w_j x_j+b=\sum_{j=0}^n w_j x_j=\mathbf{W}^T{\mathbf{x}}
+  a=\sum_{j=1}^n w_j x_j+b=\sum_{j=0}^n w_j x_j=\mathbf{w}^T{\mathbf{x}}
 \end{equation}
 که در آن، 
     ${\mathbf{x}}=[x_0=1,x_1,\cdots,x_n]^T$
 بردار ورودی و
-      $\mathbf{W}=[w_0=b,,w_1,\cdots,w_n]^T$
+      $\mathbf{w}=[w_0=b,,w_1,\cdots,w_n]^T$
 وزن اتصالات می‌باشد.
 سیگنال خروجی
 $\hat{y}$
 یا پاسخ نورون،‌ تابعی از ورودی آن است:
 \begin{equation} 	
-  \hat{y}=g(a)=g\left(\sum_{j=0}^n w_j x_j\right)=g(\mathbf{W}^T{\mathbf{x}})
+  \hat{y}=g(a)=g\left(\sum_{j=0}^n w_j x_j\right)=g(\mathbf{w}^T{\mathbf{x}})
 \end{equation}
 تابع $g(.)$ تابع فعالیت نامیده می‌شود. توابع مختلفی به عنوان تابع فعالیت درنظر گرفته می‌شوند که تابع سیگمویید با ضابطه‌ی
 $g(x)=\frac{1}{1+e^{-x}}$
@@ -608,7 +608,7 @@ $g(x)=\frac{1}{1+e^{-x}}$
 مجموعه‌ی آموزشی، متشکل از
 $N$
 زوج از الگوهای
-$\{ ({\mathbf{x}}_i,{t}_i),\;i=1,\cdots,N\}$
+$\{ ({\mathbf{x}}_i,{y}_i),\;i=1,\cdots,N\}$
 است که در آن
 $\mathbf{x}_i\in \mathbb{R}^n$
 بردار نشان دهنده‌ی $i$امین ورودی و
@@ -635,7 +635,7 @@ $\hat{y}_i$
 $w_i$
 نوشت:
 \begin{equation}
-E(\mathbf{W}) = \frac{1}{2}\sum_{i}(y_i-\hat{y}_i)^2 = \frac{1}{2}\sum_{i}\left(y_i-g(\sum_{j=0}^n w_j x_j)\right)^2
+E(\mathbf{w}) = \frac{1}{2}\sum_{i}(y_i-\hat{y}_i)^2 = \frac{1}{2}\sum_{i}\left(y_i-g(\sum_{j=0}^n w_j x_j)\right)^2
 \label{eq:cost_w}
 \end{equation}
 در این تابع خطا%
@@ -644,13 +644,13 @@ $x_j$
 و
 $y_i$
 معلوم بوده و هدف، پیدا کردن وزن‌های بهینه
-$(\mathbf{W})$
+$(\mathbf{w})$
 برای کمینه‌سازی خطاست.
 پایه‌ی همه‌ی روش‌های مرسوم کمینه‌سازی در شبکه‌های عصبی الگوریتم
 \textit{گرادیان کاهشی}
 می‌باشد. در هر مرحله از یک روال تکراری، وزن‌های جدید بر اساس گرادیان تابع هدف، به صورت زیر بهنگام می‌شوند:
 \begin{equation}
-\mathbf{W}^{new} = \mathbf{W}^{old} - \eta\nabla E
+\mathbf{w}^{new} = \mathbf{w}^{old} - \eta\nabla E
 \label{eq:delta_w}
 \end{equation}
 که
@@ -703,10 +703,40 @@ $g(a)=a$
  \eqref{eq:nabla_E}
  خطای همه‌ی داده‌های ورودی محاسبه می‌شود. اما به صورت معمول در روال آموزش شبکه‌های عصبی، خطای داده‌های آموزشی به صورت تکی یا گروهی در بروزرسانی وزن‌ها بکار برده می‌شوند:
  \begin{equation}
-\mathbf{W}^{new} = \mathbf{W}^{old} - \eta\nabla e_i
-\label{eq:delta_w_e}
+\mathbf{w}^{new} = \mathbf{w}^{old} - \eta\nabla e_i
+\label{eq:delta_W_e}
 \end{equation}
-%اگر فقط یک 
+اگر 
+$n=0$
+و یا به عبارتی فقط یک داشته باشیم، رابطه‌ی فوق برای بهنگام کردن وزنها به صورت زیر درخواهد آمد (بدون اندیس مربوط به نمونه‌ی $i$ام):
+ \begin{align}
+w &= w - \eta\nabla e \nonumber\\
+&= w - \eta(\hat{y}-y)\mathbf{x} \\
+&= w + \eta(y-\hat{y})\mathbf{x}
+\label{eq:delta_w_e}
+\end{align}
+با اندیس مربوط به نمونه‌ی $i$ام:
+ \begin{align}
+w &= w - \eta\nabla e_i \nonumber\\
+&= w - \eta(\hat{y}_i-y_i)\mathbf{x}_i \\
+&= w + \eta(y_i-\hat{y}_i)\mathbf{x}_i
+\label{eq:delta_w_e_i}
+\end{align}
+
+$n$ 
+هم تعداد ابعاد 
+$\mathbf{x}$
+را مشخص می‌کند و هم تعداد ابعاد
+$\mathbf{w}$
+را؛ لذا رابطه‌ی فوق می‌تواند با فرض برداری بودن 
+$\mathbf{x}$
+و
+$\mathbf{w}$
+به صورت زیر نوشته شود:
+ \begin{equation}
+\mathbf{w} = \mathbf{w} - \eta(\hat{y}_i-y_i)\mathbf{x}_i 
+\label{eq:delta_W_x}
+\end{equation}
 %داریم:
 %$\hat{y}_i = g(a_i) = \sum_{j=0}^n w_j x_j$
 
@@ -731,18 +761,6 @@ $g(a)=a$
 \cite{Rumelhart:1988:LRB}
 معروف است، مشابه روال فوق‌الذکر است.
 
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=.6\linewidth]{images/CNN1}
-\caption{مدل شبکه‌ی عصبی پیچشی.
-عموماً در نمایش شبکه‌های پیچشی از مکعب مستطیل برای نمایش نورون‌ها و از ماتریس (دوبعدی) یا مکعب مستطیل (سه‌بعدی) برای نمایش وزن‌ها استفاده می‌شود. مکعب خاکستری در واقع یک نورون با مدل پرسپترون نمایش داده شده در شکل
-\ref{fig:perceptron}
-است. اتصالات شبکه حکم فیلترهای یک شبکه‌ی پیچشی را دارند.
-}
-\label{fig:CNN}
-\end{figure}
-
 \subsection{شبکه‌های عصبی پیچشی }
 \label{sec:CNNs}
 در شکل
@@ -756,6 +774,19 @@ $g(a)=a$
 است.  از آنجا که تعداد اتصالات در شبکه‌های پیچشی بسیار زیاد است، به صورت خط نمایش داده نمی‌شوند، بلکه گروهی از اتصالات دارای وزن‌، در قالب ماتریس یا مکعب مستطیل نمایش داده می‌شوند و یا اصلاً نمایش داده نشده و فقط تعداد آنها ذکر می‌شود
 (شکل 
 \ref{fig:vgg16}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=.6\linewidth]{images/CNN1}
+\caption{مدل شبکه‌ی عصبی پیچشی.
+عموماً در نمایش شبکه‌های پیچشی از مکعب مستطیل برای نمایش نورون‌ها و از ماتریس (دوبعدی) یا مکعب مستطیل (سه‌بعدی) برای نمایش وزن‌ها استفاده می‌شود. مکعب خاکستری در واقع یک نورون با مدل پرسپترون نمایش داده شده در شکل
+\ref{fig:perceptron}
+است. اتصالات شبکه حکم فیلترهای یک شبکه‌ی پیچشی را دارند.
+}
+\label{fig:CNN}
+\end{figure}
+
+
 
   از معروف‌ترین توپولوژی‌های ابداع شده از شبکه‌های پیچشی، مدل
 \lr{VGG}
@@ -964,34 +995,34 @@ $n$
 استفاده از بسط تیلور در انتخاب وزن‌ها برای کاهش حجم مدل}
 \label{sec:model_size_reduction_taylor}
 فرض کنید
-$\mathbf{W}$
+$\mathbf{w}$
 بردار وزن‌های شبکه و
-$E(\mathbf{W})$
+$E(\mathbf{w})$
 تابع هزینه‌ی مسئله‌ی طبقه‌بندی باشد.
 کاهش حجم مدل، به معنی کاستن تعداد درایه‌های
-$\mathbf{W}$
+$\mathbf{w}$
 است. برای بیان ریاضی مسئله، به جای حذف درایه‌ها، مؤلفه‌های مورد هرس از
-$\mathbf{W}$
+$\mathbf{w}$
 را صفر کرده و بردار جدید را
 $\mathbf{W'}$
 می‌نامیم. صفر شدن وزن یک اتصال مترادف با حذف  (هرس) ارتباط بین دو نود مربوطه است.
 %وزن‌های جدید شبکه بعد از صفر کردن (هرس کردن) برخی از درایه‌های
-%$\mathbf{W}$
+%$\mathbf{w}$
 %باشد.
 % $i$امین درایه‌ی
-%$\mathbf{W}$
+%$\mathbf{w}$
 %باشد.
 %هرس
-%$\mathbf{W}$
+%$\mathbf{w}$
 %باشد. در واقع
 %$\mathbf{W'}$
 %همان
-%$\mathbf{W}$
+%$\mathbf{w}$
 %است که برخی از
 %$w_i$ی
 %آن صفر شده‌اند.
 اگر فرض کنيم هيچ‌کدام از درايه‌های 
-$\mathbf{W}$
+$\mathbf{w}$
 برابر با صفر نباشد،
 نرم صفر
 $\mathbf{W'}$
@@ -1002,15 +1033,15 @@ $(\norm{\mathbf{W'}}_0)$،
 %این فرض در پیاده‌سازی صادق خواهد بود. در هر دور از یک روال تکراری، مؤلفه‌های هرس شده، به واقع حذف شده و در ابتدای دور بعد
 %}.
 %برای سادگی
-%$\mathbf{W}|_{w_i=0}$
+%$\mathbf{w}|_{w_i=0}$
 %را با
 %$\mathbf{W'}$
 %نشان خواهیم داد.
 به این ترتیب میزان تغییر خطای شبکه، ناشی از هرس کردن تعدادی از اتصالات آن را می‌توان به صورت
-$|E(\mathbf{W})-E(\mathbf{W'})|$
+$|E(\mathbf{w})-E(\mathbf{W'})|$
 نشان داد.
 %اگر
-%$\mathbf{W}$
+%$\mathbf{w}$
 %شامل هیچ درایه‌ی برابر با صفری نباشد،
 %نرم صفر
 %$\mathbf{W'}$
@@ -1027,7 +1058,7 @@ $B$
 %میزان کاهش حجم مدل متناسب با تعداد درایه‌هایی است...
 با مفروضات فوق، مسئله‌ی کاهش تعداد اتصالات شبکه را می‌توان به صورت زیر نوشت:
 \begin{equation}
-\min_{\mathbf{W'}} |E(\mathbf{W})-E(\mathbf{W'})| \quad \mathtt{s.t.}\  \norm{\mathbf{W'}}_0 \le B
+\min_{\mathbf{W'}} |E(\mathbf{w})-E(\mathbf{W'})| \quad \mathtt{s.t.}\  \norm{\mathbf{W'}}_0 \le B
 \label{eq:minEW}
 \end{equation}
 
@@ -1035,7 +1066,7 @@ $B$
 %$w_i$ی
 %انتخاب شود که حذف (صفر) کردن آن کمترین تاثیر را بر روی تابع هزینه داشته باشد.
 %اگر
-%$E(\mathbf{W}|_{w_i=0})$
+%$E(\mathbf{w}|_{w_i=0})$
 %بیانگر مقدار تابع هزینه، در حالتی باشد که وزن
 %$w_i=0$
 %آنگاه هدف مسئله به صورت زیر درخواهد آمد:
@@ -1081,26 +1112,26 @@ $(0,w_2)$
 E(w_1,w_2) \approx E(0,w_2) + \frac{\partial}{\partial w_1}E(0,w_2)(w_1-0)
 \end{equation}
 پیش از این، بردار
-$\mathbf{W}$
+$\mathbf{w}$
 که تعدادی از درایه‌های آن صفر باشند، با
 $\mathbf{W'}$
 نمایش داده شد؛  برای حالت دو متغیره‌ی فوق‌الذکر و با فرض
-$\mathbf{W}=[w_1,w_2]$
+$\mathbf{w}=[w_1,w_2]$
 و
 $\mathbf{W'}=[0,w_2]$،
 رابطه‌ی
   \eqref{eq:E_w1_w2}
 را می‌توان به صورت زیر نوشت:
 \begin{equation}
-E(\mathbf{W}) \approx E(\mathbf{W'}) + \frac{\partial}{\partial w_i}E(\mathbf{W'})(w_i-0),  \qquad i=1
+E(\mathbf{w}) \approx E(\mathbf{W'}) + \frac{\partial}{\partial w_i}E(\mathbf{W'})(w_i-0),  \qquad i=1
 \end{equation}
 به عبارت دیگر در حالت کلی داریم:
 \begin{equation}
-E(\mathbf{W})-E(\mathbf{W'}) \approx  \frac{\partial}{\partial w_i}E(\mathbf{W'})w_i
+E(\mathbf{w})-E(\mathbf{W'}) \approx  \frac{\partial}{\partial w_i}E(\mathbf{W'})w_i
 \end{equation}
 و لذا:
 \begin{equation}
-|E(\mathbf{W})-E(\mathbf{W'})| \approx  \left|\frac{\partial}{\partial w_i}E(\mathbf{W'})w_i\right|
+|E(\mathbf{w})-E(\mathbf{W'})| \approx  \left|\frac{\partial}{\partial w_i}E(\mathbf{W'})w_i\right|
 \label{eq:equality}
 \end{equation}
 به این ترتیب مسئله‌ی کمینه‌سازی
@@ -1115,11 +1146,11 @@ E(\mathbf{W})-E(\mathbf{W'}) \approx  \frac{\partial}{\partial w_i}E(\mathbf{W'}
  در رابطه‌ی
 ~\eqref{eq:equality}، 
 مقدار
-$|E(\mathbf{W})-E(\mathbf{W'})|$
+$|E(\mathbf{w})-E(\mathbf{W'})|$
 بیانگر تغییر کارایی شبکه در صورت صفر شدن
 $i$امین
 مؤلفه‌ی
-$\mathbf{W}$
+$\mathbf{w}$
 است که با بسط تیلور،
 معادل بودن تقریبی آن با
 $\left|\frac{\partial}{\partial w_i}E(\mathbf{W'})w_i\right|$
