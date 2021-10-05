@@ -1,0 +1,472 @@
+@book{franoischollet2017learning,
+  added-at = {2018-08-01T08:16:18.000+0200},
+  author = {Chollet, François},
+  biburl = {https://www.bibsonomy.org/bibtex/231f94815ebbd65d3a31e4a69e818573e/jaeschke},
+  interhash = {cfbfd3f93853a469e5e6978f61a74a0a},
+  intrahash = {31f94815ebbd65d3a31e4a69e818573e},
+  isbn = {9781617294433},
+  keywords = {ai deeplearning ml},
+  month = nov,
+  publisher = {Manning},
+  timestamp = {2018-08-01T08:16:18.000+0200},
+  title = {Deep Learning with Python },
+  year = 2017
+}
+
+@incollection{NIPS2016_6504,
+title = {Learning Structured Sparsity in Deep Neural Networks},
+author = {Wen, Wei and Wu, Chunpeng and Wang, Yandan and Chen, Yiran and Li, Hai},
+booktitle = {Advances in Neural Information Processing Systems 29},
+editor = {D. D. Lee and M. Sugiyama and U. V. Luxburg and I. Guyon and R. Garnett},
+pages = {2074--2082},
+year = {2016},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/6504-learning-structured-sparsity-in-deep-neural-networks.pdf}
+}
+
+@misc{mitsuno2020hierarchical,
+    title={Hierarchical Group Sparse Regularization for Deep Convolutional Neural Networks},
+    author={Kakeru Mitsuno and Junichi Miyao and Takio Kurita},
+    year={2020},
+    eprint={2004.04394},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+
+@article{Hinton2012dropout,
+  author    = {Geoffrey E. Hinton and
+               Nitish Srivastava and
+               Alex Krizhevsky and
+               Ilya Sutskever and
+               Ruslan Salakhutdinov},
+  title     = {Improving neural networks by preventing co-adaptation of feature detectors},
+  journal   = {CoRR},
+  volume    = {abs/1207.0580},
+  year      = {2012},
+  url       = {http://arxiv.org/abs/1207.0580},
+  archivePrefix = {arXiv},
+  eprint    = {1207.0580},
+  timestamp = {Mon, 13 Aug 2018 16:46:10 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1207-0580.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{JMLR:v15:srivastava14a,
+  author  = {Nitish Srivastava and Geoffrey Hinton and Alex Krizhevsky and Ilya Sutskever and Ruslan Salakhutdinov},
+  title   = {Dropout: A Simple Way to Prevent Neural Networks from Overfitting},
+  journal = {Journal of Machine Learning Research},
+  year    = {2014},
+  volume  = {15},
+  number  = {56},
+  pages   = {1929-1958},
+  url     = {http://jmlr.org/papers/v15/srivastava14a.html}
+}
+
+@InProceedings{pmlr-v28-wan13,
+  title = 	 {Regularization of Neural Networks using DropConnect},
+  author = 	 {Li Wan and Matthew Zeiler and Sixin Zhang and Yann Le Cun and Rob Fergus},
+  booktitle = 	 {Proceedings of the 30th International Conference on Machine Learning},
+  pages = 	 {1058--1066},
+  year = 	 {2013},
+  editor = 	 {Sanjoy Dasgupta and David McAllester},
+  volume = 	 {28},
+  number =       {3},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {Atlanta, Georgia, USA},
+  month = 	 {17--19 Jun},
+  publisher = 	 {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v28/wan13.pdf},
+  url = 	 {http://proceedings.mlr.press/v28/wan13.html},
+  abstract = 	 {We introduce DropConnect, a generalization of DropOut, for regularizing large fully-connected layers within neural networks. When training with Dropout, a randomly selected subset of activations are set to zero within each layer. DropConnect instead sets a randomly selected subset of weights within the network to zero. Each unit thus receives input from a random subset of units in the previous layer. We derive a bound on the generalization performance of both Dropout and DropConnect. We then evaluate DropConnect on a range of datasets, comparing to Dropout, and show state-of-the-art results on several image recoginition benchmarks can be obtained by aggregating multiple DropConnect-trained models.}
+}
+
+@article{WU20151,
+title = "Towards dropout training for convolutional neural networks",
+journal = "Neural Networks",
+volume = "71",
+pages = "1 - 10",
+year = "2015",
+issn = "0893-6080",
+doi = "https://doi.org/10.1016/j.neunet.2015.07.007",
+url = "http://www.sciencedirect.com/science/article/pii/S0893608015001446",
+author = "Haibing Wu and Xiaodong Gu",
+keywords = "Deep learning, Convolutional neural networks, Max-pooling dropout",
+abstract = "Recently, dropout has seen increasing use in deep learning. For deep convolutional neural networks, dropout is known to work well in fully-connected layers. However, its effect in convolutional and pooling layers is still not clear. This paper demonstrates that max-pooling dropout is equivalent to randomly picking activation based on a multinomial distribution at training time. In light of this insight, we advocate employing our proposed probabilistic weighted pooling, instead of commonly used max-pooling, to act as model averaging at test time. Empirical evidence validates the superiority of probabilistic weighted pooling. We also empirically show that the effect of convolutional dropout is not trivial, despite the dramatically reduced possibility of over-fitting due to the convolutional architecture. Elaborately designing dropout training simultaneously in max-pooling and fully-connected layers, we achieve state-of-the-art performance on MNIST, and very competitive results on CIFAR-10 and CIFAR-100, relative to other approaches without data augmentation. Finally, we compare max-pooling dropout and stochastic pooling, both of which introduce stochasticity based on multinomial distributions at pooling stage."
+}
+
+@article{DBLP:journals/corr/abs-1802-10280,
+  author    = {Xuhao Chen},
+  title     = {Escort: Efficient Sparse Convolutional Neural Networks on GPUs},
+  journal   = {CoRR},
+  volume    = {abs/1802.10280},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1802.10280},
+  archivePrefix = {arXiv},
+  eprint    = {1802.10280},
+  timestamp = {Thu, 07 May 2020 17:04:37 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-1802-10280.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{conf/cvpr/LiuWFTP15,
+  added-at = {2019-02-06T00:00:00.000+0100},
+  author = {Liu, Baoyuan and Wang, Min and Foroosh, Hassan and Tappen, Marshall F. and Pensky, Marianna},
+  biburl = {https://www.bibsonomy.org/bibtex/27218677270ceaaaf7e363913707c032c/dblp},
+  booktitle = {CVPR},
+  crossref = {conf/cvpr/2015},
+  ee = {http://doi.ieeecomputersociety.org/10.1109/CVPR.2015.7298681},
+  interhash = {c97545f7c0766c036cecbb594a8d0f48},
+  intrahash = {7218677270ceaaaf7e363913707c032c},
+  isbn = {978-1-4673-6964-0},
+  keywords = {dblp},
+  pages = {806-814},
+  publisher = {IEEE Computer Society},
+  timestamp = {2019-02-07T11:42:21.000+0100},
+  title = {Sparse Convolutional Neural Networks.},
+  url = {http://dblp.uni-trier.de/db/conf/cvpr/cvpr2015.html#LiuWFTP15},
+  year = 2015
+}
+
+@proceedings{conf/cvpr/2015,
+  title     = {{IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR}
+               2015, Boston, MA, USA, June 7-12, 2015},
+  publisher = {{IEEE} Computer Society},
+  year      = {2015},
+  url       = {https://ieeexplore.ieee.org/xpl/conhome/7293313/proceeding},
+  isbn      = {978-1-4673-6964-0},
+  timestamp = {Wed, 16 Oct 2019 01:00:00 +0200},
+  biburl    = {https://dblp.org/rec/conf/cvpr/2015.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@ARTICLE{Waldmann2020SCNN_GWP,
+AUTHOR={Waldmann, Patrik and Pfeiffer, Christina and Mészáros, Gábor},   	 
+TITLE={Sparse Convolutional Neural Networks for Genome-Wide Prediction},      	
+JOURNAL={Frontiers in Genetics},      
+VOLUME={11},      
+PAGES={25},     
+YEAR={2020},      	  
+URL={https://www.frontiersin.org/article/10.3389/fgene.2020.00025},       	
+DOI={10.3389/fgene.2020.00025},      	
+ISSN={1664-8021},     
+ABSTRACT={Genome-wide prediction (GWP) has become the state-of-the art method in artificial selection. Data sets often comprise number of genomic markers and individuals in ranges from a few thousands to millions. Hence, computational efficiency is important and various machine learning methods have successfully been used in GWP. Neural networks (NN) and deep learning (DL) are very flexible methods that usually show outstanding prediction properties on complex structured data, but their use in GWP is nevertheless rare and debated. This study describes a powerful NN method for genomic marker data that can easily be extended. It is shown that a one-dimensional convolutional neural network (CNN) can be used to incorporate the ordinal information between markers and, together with pooling and ℓ<sub>1</sub>-norm regularization, provides a sparse and computationally efficient approach for GWP. The method, denoted CNNGWP, is implemented in the deep learning software Keras, and hyper-parameters of the NN are tuned with Bayesian optimization. Model averaged ensemble predictions further reduce prediction error. Evaluations show that CNNGWP improves prediction error by more than 25% on simulated data and around 3% on real pig data compared with results obtained with GBLUP and the LASSO. In conclusion, the CNNGWP provides a promising approach for GWP, but the magnitude of improvement depends on the genetic architecture and the heritability.}
+}
+
+@incollection{Rumelhart:1988:LRB,
+ author = {Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},
+ chapter = {Learning Representations by Back-propagating Errors},
+ title = {Neurocomputing: Foundations of Research},
+ editor = {Anderson, James A. and Rosenfeld, Edward},
+ year = {1988},
+ isbn = {0-262-01097-6},
+ pages = {696--699},
+ numpages = {4},
+ url = {http://dl.acm.org/citation.cfm?id=65669.104451},
+ acmid = {104451},
+ publisher = {MIT Press},
+ address = {Cambridge, MA, USA},
+}
+
+@inproceedings{MolchanovTKAK17,
+  author    = {Pavlo Molchanov and
+               Stephen Tyree and
+               Tero Karras and
+               Timo Aila and
+               Jan Kautz},
+  title     = {Pruning Convolutional Neural Networks for Resource Efficient Inference},
+  booktitle = {5th International Conference on Learning Representations, {ICLR} 2017,
+               Toulon, France, April 24-26, 2017, Conference Track Proceedings},
+  publisher = {OpenReview.net},
+  year      = {2017},
+  url       = {https://openreview.net/forum?id=SJGCiw5gl},
+  timestamp = {Thu, 25 Jul 2019 14:25:44 +0200},
+  biburl    = {https://dblp.org/rec/conf/iclr/MolchanovTKAK17.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{MolchanovMTFK19,
+  author    = {Pavlo Molchanov and
+               Arun Mallya and
+               Stephen Tyree and
+               Iuri Frosio and
+               Jan Kautz},
+  title     = {Importance Estimation for Neural Network Pruning},
+  booktitle = {{IEEE} Conference on Computer Vision and Pattern Recognition, {CVPR}
+               2019, Long Beach, CA, USA, June 16-20, 2019},
+  pages     = {11264--11272},
+  publisher = {Computer Vision Foundation / {IEEE}},
+  year      = {2019},
+  url       = {http://openaccess.thecvf.com/content\_CVPR\_2019/html/Molchanov\_Importance\_Estimation\_for\_Neural\_Network\_Pruning\_CVPR\_2019\_paper.html},
+  doi       = {10.1109/CVPR.2019.01152},
+  timestamp = {Thu, 27 Aug 2020 07:31:34 +0200},
+  biburl    = {https://dblp.org/rec/conf/cvpr/MolchanovMTFK19.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{Khosravi2007IntroducingAV,
+  title={Introducing a very large dataset of handwritten Farsi digits and a study on their varieties},
+  author={Hossein Khosravi and Ehsanollah Kabir},
+  journal={Pattern Recognit. Lett.},
+  year={2007},
+  volume={28},
+  pages={1133-1141}
+}
+
+@InProceedings{MsCOCO,
+author="Lin, Tsung-Yi
+and Maire, Michael
+and Belongie, Serge
+and Hays, James
+and Perona, Pietro
+and Ramanan, Deva
+and Doll{\'a}r, Piotr
+and Zitnick, C. Lawrence",
+editor="Fleet, David
+and Pajdla, Tomas
+and Schiele, Bernt
+and Tuytelaars, Tinne",
+title="Microsoft COCO: Common Objects in Context",
+booktitle="Computer Vision -- ECCV 2014",
+year="2014",
+publisher="Springer International Publishing",
+address="Cham",
+pages="740--755",
+abstract="We present a new dataset with the goal of advancing the state-of-the-art in object recognition by placing the question of object recognition in the context of the broader question of scene understanding. This is achieved by gathering images of complex everyday scenes containing common objects in their natural context. Objects are labeled using per-instance segmentations to aid in precise object localization. Our dataset contains photos of 91 objects types that would be easily recognizable by a 4 year old. With a total of 2.5 million labeled instances in 328k images, the creation of our dataset drew upon extensive crowd worker involvement via novel user interfaces for category detection, instance spotting and instance segmentation. We present a detailed statistical analysis of the dataset in comparison to PASCAL, ImageNet, and SUN. Finally, we provide baseline performance analysis for bounding box and segmentation detection results using a Deformable Parts Model.",
+isbn="978-3-319-10602-1"
+}
+
+
+@article {Mirzaei98,
+author = {Mirzaei, Sayeh and Haghshenas, Javad},
+title = {Hyperspectral image classification using sub-band tensor factorization and convolutional neural network},
+journal = {Journal of Machine Vision and Image Processing},
+volume = {},
+number = {},
+pages = {},
+year  = {2019},
+publisher = {Iranian Society of Machine Vision and Image Processing},
+issn = {2383-1197}, 
+eissn = {2383-1197}, 
+doi = {},
+abstract = {In this paper, we are going to classify each pixel of a hyperspectral image. For this purpose, we group the spectral bands to sub-bands and try to decompose the corresponding sub-tensors to the endmember and abundance matrices. Abundance matrices obtained through tensor factorization methods contain spatial information in contrast to the ones acquired by matrix factorization. Therefore, the 2D abundance maps achieved by tensor decomposition methods, construct discriminant features for the classifier. A 3D CNN architecture is proposed for classification which utilizes the abundance maps of the individual sub-bands as input features. This way, we jointly exploit spectral and spatial information of the image. The experiments are performed on well-known hyperspectral data and reveal the effectiveness of the proposed sub-band tensor decomposition methods compared to matrix factorization approaches.},
+keywords = {Hyperspectral Image Classification,Sub-band Non-negative Tensor Factorization (NTF)؛ 3D Convolutional Neural Network (3D CNN)},
+title_fa = {طبقه بندی تصاویر هایپراسپکترال با استفاده از تجزیه تنسور زیرباند و شبکه عصبی پیچشی},
+abstract_fa = {در این مقاله، به موضوع طبقه بندی تصاویر ابرطیفی پرداخته می شود. با استفاده از روش های تجزیه، ماتریس یا تنسور تصویر ابرطیفی به دو ماتریس تجزیه می شود که یکی نمایانگر امضاهای طیفی مواد تشکیل دهنده تصویر می باشد و دیگری میزان فراوانی هر ماده در هر پیکسل را نشان می دهد. از آنجاییکه ذات تصویر ابرطیفی سه بعدی است، روش های تجزیه تنسور نامنفی بسیار بهتر به مساله منطبق هستند چرا که به جای به دنبال هم نشاندن اطلاعات مکانی در یک بردار ،اطلاعات مکانی را حفظ می کنند و ساختار همسایگی پیکسل ها در مدل لحاظ می شود. با هدف  بهره گیری مشترک از اطلاعات مکانی و طیفی، کل طیف فرکانسی به چندین زیرباند تقسیم می شود و تجزیه روی هر زیر باند به صورت جداگانه صورت می پذیرد و ماتریس های فراوانی زیرباندها به دنبال هم قرار می گیرند و ماتریس ویژگی را می سازند. ماتریس فراوانی حاصل از روش های تجزیه تنسور نسبت به تجزیه ماتریس، به نتایج بهتری منجر می شود. آزمایشها بر روی سه مجموعه داده شناخته شده، مبین بهبود چشمگیر در دقت طبقه بندی حاصل با استفاده از روش پیشنهادی هستند. برای طبقه بندی از شبکه عصبی پیچشی سه بعدی استفاده شده است.},
+keywords_fa = {طبقه بندی تصاویر ابرطیفی,روش تجزیه تنسور نامنفی (NTF),NTF در زیرباند (Subband NTF),شبکه های عصبی پیچشی سه بعدی (3D-CNN)},	
+url = {http://jmvip.sinaweb.net/article_99538.html},
+eprint = {http://jmvip.sinaweb.net/article_99538_9baff5d5d68933369ae4adeee8e2f461.pdf}
+}
+		
+		
+		
+@article {Jampour99,
+author = {Jampour, Mahdi and Javidi, Malihe},
+title = {A Joint DNN Architecture with explicit features for Signature Identification image},
+journal = {Journal of Machine Vision and Image Processing},
+volume = {},
+number = {},
+pages = {to be published},
+year  = {2020},
+publisher = {Iranian Society of Machine Vision and Image Processing},
+issn = {2383-1197}, 
+eissn = {2383-1197}, 
+doi = {},
+abstract = {In this paper, we have proposed a new joint architecture using Deep Neural Network (DNN) and a traditional descriptor for feature extraction towards signature identification. The proposed approach is an extended version of ResNet-18, which is enhanced using our two paths architecture. In the first path, we explore features using a deep convolutional neural network, and in the second path, we discover global features using a traditional heuristic approach. Our traditional approach extracts global features that are stable with rotation and scaling. For evaluation, we performed extensive experiments on accessible datasets of CEDAR, UTsig, and GPDS through the proposed approach. Our results show that the proposed joint approach outperformed the baseline ResNet-18 and demonstrate our approach superiority. Also, the comparisons with the related works show that our approach results are better or in par with state of the art.},
+keywords = {Two-path DNN architecture,Feature concatenation,ResNet,Traditional features,Joint architecture},
+title_fa = {یک معماری شبکه عصبی عمیق مشترک با ویژگی‌های صریح برای بازشناسی امضاء},
+abstract_fa = {در این مقاله، یک مدل معماری مشترک برای بهره‌ مندی از ویژگی‌های استخراج شده توسط شبکه عصبی عمیق و ویژگی‌های صریح استخراج شده به روش کلاسیک برای مساله بازشناسی امضاء ارائه شده است. معماری پیشنهادی، شکل توسعه یافته مدل رِزنت 18 لایه می‌باشد که طی آن یک مدل معماری دو مسیره تعریف شده است که در یک مسیر ویژگی‌های استخراج شده توسط شبکه عصبی عمیق رزنت و در مسیر دوم ویژگی‌های سراسری به روش کلاسیک با یکدیگر ترکیب می‌شوند. همچنین برای استخراج ویژگی‌ها به روش کلاسیک، یک ایده ابتکاری سراسری ارائه شده است که در آن، توصیفگر، نسبت به برخی تغییرات متداول در نمونه‌های امضاء مانند دوران و بزرگنمایی پایدار است. ارزیابی‌های متنوعی بر روی روش ارائه شده انجام شده است بطوریکه از سه پایگاه داده مشهور تصاویر امضاء CEDAR, UTsig و GPDS برای تحلیل روش پیشنهادی و مقایسه با روش‌های مشابه استفاده شده است. نتایج ارزیابی‌ها، حاکی از بهبود دقت بازشناسی امضاء به‌وسیله معماری مدل مشترک ارائه شده نسبت به مدل پایه می‌باشد همچنین مقایسه روش پیشنهادی با بهترین نتایج موجود نشان می‌دهد در اغلب موارد دقت روش پیشنهادی، بهتر از بهترین نتایج منتشر شده است.},
+keywords_fa = {معماری یادگیری عمیق دو مسیره,ترکیب ویژگی‌ها,شبکه عصبی عمیق رِزنت,ویژگی‌های کلاسیک,معماری مشترک},	
+url = {http://jmvip.sinaweb.net/article_108368.html},
+eprint = {http://jmvip.sinaweb.net/article_108368_e708e0f5255d44f3a98f2092edacead2.pdf}
+}
+
+@article {EEG99,
+author = {Sheykhivand, Sobhan and Meshgini, Saeed and Mousavi, Zohreh},
+title = {Automatic Detection of Various Epileptic Seizures from EEG Signal Using Deep Learning Networks},
+journal = {Computational Intelligence in Electrical Engineering},
+volume = {11},
+number = {3},
+pages = {1-12},
+year  = {2020},
+publisher = {University of Isfahan},
+issn = {2251-6530}, 
+eissn = {2252-083X}, 
+doi = {10.22108/isee.2020.115532.1192},
+abstract = {Using an intelligent method to automatically detect epileptic seizures in medical applications is one of the most important challenges in recent years to reduce the workload of doctors in the analysis of epilepsy data through visual inspection. One of the problems of automatic detection of various epileptic seizures is the extraction of desirable characteristics, in such a way that these characteristics can make the most distinction between different phases of epilepsy. The process of finding the right features is usually a matter of time. This research presents a new approach for the automatic identification of epileptic episodes. In this paper, a deep convolutional network with eight convolutional layers and two fully-connected layers is provided to learn the characteristics hierarchically and automatically identify epileptic episodes using the EEG signal. The results show that the use of deep learning in applications such as learning characteristics hierarchically and identification of different stages of epilepsy has a higher success rate than other previous methods. The proposed model presented in this paper provides an average of 100% accuracy, sensitivity and specificity for the classification of three different epileptic seizures.},
+keywords = {EEG,Automatic detection of various epileptic seizures,Convulsion Neural Network,Seizure},
+title_fa = {شناسایی خودکار حالت‌های مختلف بیماری صرع از سیگنال EEG با استفاده از شبکه‌های یادگیری عمیق},
+abstract_fa = {استفاده از روشی هوشمند برای تشخیص خودکار مراحل مختلف صرعی در کاربردهای پزشکی، برای کاهش حجم کار پزشکان در تجزیه‌وتحلیل داده‌های صرع با بازرسی بصری، یکی از چالش‌های مهم در سال‌های اخیر محسوب می‌شود. یکی از مشکلات شناسایی خودکار مراحل مختلف صرعی، استخراج ویژگی‌های مطلوب است؛ به‌گونه‌ای که این ویژگی‌ها بتوانند بیشترین تمایز را بین مراحل مختلف صرعی ایجاد کنند. فرآیند یافتن ویژگی‌های مناسب، عموماً امری زمان‌بر است. این پژوهش، رویکرد جدیدی را برای شناسایی خودکار مراحل مختلف صرعی ارائه می‌دهد. در این مقاله، یک شبکۀ کانولوشنال عمیق با  8 لایۀ کانولوشن و 2 لایۀ تماماً متصل برای یادگیری ویژگی‌ها به‌صورت سلسله‌مراتبی و شناسایی خودکار مراحل مختلف صرعی با استفاده از سیگنال EEG ارائه می‌شود. نتایج نشان می‌دهند استفاده از یادگیری عمیق در کاربردهایی همچون یادگیری ویژگی به‌صورت سلسله‌مراتبی و شناسایی مراحل مختلف صرعی، درصد موفقیت بالاتری نسبت به سایر روش‌های مشابه دارد. مدل پیشنهادی ارائه‌شده در این مقاله برای طبقه‌بندی 3 حالت مختلف صرعی، مقدار 100% را دربارۀ معیارهای صحت، حساسیت و اختصاصیت فراهم می‌کند.},
+keywords_fa = {شناسایی خودکار حالت‌های مختلف تشنجات صرعی,شبکۀ عصبی کانولوشن,تشنج},	
+url = {http://isee.ui.ac.ir/article_24619.html},
+eprint = {http://isee.ui.ac.ir/article_24619_9b99e12622d7d13a21155e5ea123669d.pdf}
+}
+   
+@ARTICLE{Sabri1399,
+  author={محمد صبری and محمد شهرام معین and فربد رزازی},
+  journal={نشریه مهندسی برق و مهندسی کامپیوتر}, 
+  title={ ارائه یک روش ترتیبی پویا بر اساس یادگیری عمیق به منظور بهبود کارایی سیستم‌های تطبیق بیومتریکی مبتنی بر کارت هوشمند}, 
+  year={1399},
+  volume={18},
+  number={1-ب},
+  pages={29-41},
+  language = "Persian"}
+  
+  
+@incollection{NIPS2012_4824,
+title = {ImageNet Classification with Deep Convolutional Neural Networks},
+author = {Alex Krizhevsky and Sutskever, Ilya and Hinton, Geoffrey E},
+booktitle = {Advances in Neural Information Processing Systems 25},
+editor = {F. Pereira and C. J. C. Burges and L. Bottou and K. Q. Weinberger},
+pages = {1097--1105},
+year = {2012},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}
+}
+
+@InProceedings{ResNet_He_2016_CVPR,
+author = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+title = {Deep Residual Learning for Image Recognition},
+booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2016}
+} 
+
+@InProceedings{VGG_Simonyan15,
+  author       = "Karen Simonyan and Andrew Zisserman",
+  title        = "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+  booktitle    = "International Conference on Learning Representations",
+  year         = "2015",
+}
+
+
+@INPROCEEDINGS{RCNN,
+  author={R. {Girshick} and J. {Donahue} and T. {Darrell} and J. {Malik}},  
+  booktitle={2014 IEEE Conference on Computer Vision and Pattern Recognition},   title={Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation},   year={2014},  volume={},  number={},  pages={580-587},}
+
+@InProceedings{mottaghi_cvpr14,
+ author       = {Roozbeh Mottaghi and Xianjie Chen and Xiaobai Liu and Nam-Gyu Cho and Seong-Whan Lee and Sanja Fidler and Raquel Urtasun and Alan Yuille},
+ title        = {The Role of Context for Object Detection and Semantic Segmentation in the Wild},
+ booktitle    = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+ year         = {2014},
+}
+
+@Article{Everingham10,
+   author = "Everingham, M. and Van~Gool, L. and Williams, C. K. I. and Winn, J. and Zisserman, A.",
+   title = "The {Pascal Visual Object Classes (VOC)} Challenge",
+   journal = "International Journal of Computer Vision",
+   volume = "88",
+   year = "2010",
+   number = "2",
+   month = jun,
+   pages = "303--338",
+} 
+
+@inproceedings{NYD2012,
+author = {Silberman, Nathan and Hoiem, Derek and Kohli, Pushmeet and Fergus, Rob},
+title = {Indoor Segmentation and Support Inference from {RGBD} Images},
+year = {2012},
+isbn = {9783642337147},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+url = {https://doi.org/10.1007/978-3-642-33715-4_54},
+doi = {10.1007/978-3-642-33715-4_54},
+booktitle = {Proceedings of the 12th European Conference on Computer Vision - Volume Part V},
+pages = {746–760},
+numpages = {15},
+location = {Florence, Italy},
+series = {ECCV’12}
+}
+  
+@InProceedings{WSOD2019Li,
+author = {Li, Xiaoyan and Kan, Meina and Shan, Shiguang and Chen, Xilin},
+title = {Weakly Supervised Object Detection With Segmentation Collaboration},
+booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+month = {October},
+year = {2019}
+} 
+
+@ARTICLE{DLSurvey2019Jiao,
+  author={L. {Jiao} and F. {Zhang} and F. {Liu} and S. {Yang} and L. {Li} and Z. {Feng} and R. {Qu}},
+  journal={IEEE Access},
+  title={A Survey of Deep Learning-Based Object Detection},
+   year={2019},  volume={7},  number={},  pages={128837-128868},}
+   
+@ARTICLE{MaskRCNN2020He,
+  author={K. {He} and G. {Gkioxari} and P. {Dollár} and R. {Girshick}},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={{Mask R-CNN}}, 
+  year={2020},
+  volume={42},
+  number={2},
+  pages={386-397}}
+
+@ARTICLE{SegNet2017,
+  author={V. {Badrinarayanan} and A. {Kendall} and R. {Cipolla}},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  title={{SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation}},
+  year={2017},  volume={39},  number={12},
+  pages={2481-2495},}
+
+@inproceedings{FastRCNN,
+author = {Girshick, Ross},
+title = {{Fast R-CNN}},
+year = {2015},
+isbn = {9781467383912},
+publisher = {IEEE Computer Society},
+address = {USA},
+url = {https://doi.org/10.1109/ICCV.2015.169},
+doi = {10.1109/ICCV.2015.169},
+booktitle = {Proceedings of the 2015 IEEE International Conference on Computer Vision (ICCV)},
+pages = {1440–1448},
+numpages = {9},
+series = {ICCV ’15}
+}
+  
+@ARTICLE{FasterRCNN2017Ren,
+  author={S. {Ren} and K. {He} and R. {Girshick} and J. {Sun}},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  title={{Faster R-CNN}: Towards Real-Time Object Detection with Region Proposal Networks},
+  year={2017},
+  volume={39},
+  number={6},
+  pages={1137-1149},}
+
+@article{FCN2017PAMI,
+author = {Shelhamer, Evan and Long, Jonathan and Darrell, Trevor},
+title = {Fully Convolutional Networks for Semantic Segmentation},
+year = {2017},
+issue_date = {April 2017},
+publisher = {IEEE Computer Society},
+address = {USA},
+volume = {39},
+number = {4},
+issn = {0162-8828},
+url = {https://doi.org/10.1109/TPAMI.2016.2572683},
+doi = {10.1109/TPAMI.2016.2572683},
+journal = {IEEE Trans. Pattern Anal. Mach. Intell.},
+month = apr,
+pages = {640–651},
+numpages = {12}
+}
+
+@article{redmon2017yolo9000,
+	title={YOLO9000: Better, Faster, Stronger},
+	author={Redmon, Joseph and Farhadi, Ali},
+	journal={CVPR},
+	year={2017}
+}
+
+
+@INPROCEEDINGS{YOLO2016,
+  author={J. {Redmon} and S. {Divvala} and R. {Girshick} and A. {Farhadi}},
+  booktitle={2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  title={You Only Look Once: Unified, Real-Time Object Detection},
+  year={2016},  volume={},  number={},  pages={779-788},}
+
+@inproceedings{Silberman:ECCV12,
+  author    = {Nathan Silberman, Derek Hoiem, Pushmeet Kohli and Rob Fergus},
+  title     = {Indoor Segmentation and Support Inference from RGBD Images},
+  booktitle = {ECCV},
+  year      = {2012}
+}
+

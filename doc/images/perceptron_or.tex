@@ -1,0 +1,51 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz}
+
+\tikzset{basic/.style={draw,fill=gray!30,
+                       text badly centered,minimum width=3em}}
+\tikzset{cell/.style={basic,circle,minimum size=50mm,fill=gray!10}}
+\tikzset{input/.style={basic,circle}}
+\tikzset{weights/.style={basic,rectangle,minimum width=2em}}
+\tikzset{transfer_functions/.style={basic,circle}}
+\tikzset{activation_functions/.style={basic,rectangle,minimum width=2.8em,minimum height=2.8em,fill=gray!50}}
+\newcommand{\addsymbol}{\draw[thick] (0.5em,0.5em) -- (0,0.5em) -- 
+                        (0,-0.5em) --  (-0.5em,-0.5em)
+                        (0em,0.75em) -- (0em,-0.75em)
+                        (0.75em,0em) -- (-0.75em,0em);}
+                        
+%\newcommand{\addsymbol}{\draw[color=magenta] plot[
+%            mark=none,
+%            samples=100,
+%            domain=-3:3,
+%        ] ({\x},{1/(1+exp(-\x))});;}
+\input{commands}
+\begin{document}
+    \begin{tikzpicture}[scale=1.2]
+%    \node[cell](cell) at (5,-1) {};
+    \node[transfer_functions] (sum) at (4,-1) {$\sum$};
+%    \node (a) at (4.6,.2) {$a$};
+    \foreach \h [count=\hi ] in {$x_2$,$x_1$,$1$}{%
+          \node[input] (f\hi) at (0,\hi*2cm-5 cm) {\h};
+          \draw[line width=0.3mm,->] (f\hi) -- (sum);
+        }
+%    \node(dots) at (0,-20mm) {$\vdots$};    
+    \foreach \h [count=\hi ] in {$w_2=1$,$w_1=1$,$w_0=-1.5$}{%
+          \path (f\hi) -- node[weights] (w\hi) {\h} (sum);
+%          \draw[->] (f\hi) -- (w\hi);
+%          \draw[->] (w\hi) -- (sum);
+        }        
+    \node(step) at (5.5,-1) {$y$};
+%    \node[activation_functions] (step) at (6,-1) {};
+%       \begin{scope}[xshift=6cm,scale=.8]
+%         \addsymbol
+%       \end{scope}
+    \draw[line width=0.4mm,->] (sum) -- (step);
+%    \draw[line width=0.4mm,->] (step) -- ++(1.7,0);
+    % Labels
+    \node[above=5mm]  at (f3) {\rl{ورودی‌ها}};
+    \node[above=5mm] at (w3) {\rl{وزن‌ اتصالات}};
+%    \node[above right]  at (sum) {$a$};
+%    \node[above=5mm] at (step) {$g$ \rl{تابع فعالیت}};
+%    \node (y) at (7.3,.2) {$y$};
+    \end{tikzpicture}
+\end{document}
