@@ -10,5 +10,3 @@ Repository of neural network implementations from scratch.
 
 https://colab.research.google.com/github/mamintoosi/perceptron/blob/main/perceptron.ipynb
 
-
-Some files is borrowed from <a href="https://jtsulliv.github.io/perceptron/"> JSULLIVAN github page </a>, but currently is unavailable.
